@@ -1,0 +1,354 @@
+  <style>
+    .skill-tag {
+        @apply bg-[#94754C] text-white text-sm font-medium px-2.5 py-1 rounded-sm;
+    }
+    </style>
+  
+
+
+<div class="container mx-auto px-4">  
+    <div>
+    <nav class="w-full bg-[#EDEADF]">
+        <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+        
+        <!-- Logo -->
+        <a href="/home" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <%= image_tag "smallerlogo-removebg.png", alt: "BSlogo", class: "h-25 w-auto" %>
+        </a>
+
+        <!-- Hamburger button -->
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#9C7B50] rounded-lg md:hidden hover:bg-[#d6d4cc] focus:outline-none focus:ring-2 focus:ring-[#9C7B50]">
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Menu Items -->
+        <div id="mobile-menu" class="hidden w-full md:flex md:w-auto md:items-center md:space-x-8">
+            <ul class="flex flex-col md:flex-row mt-4 md:mt-0 text-base font-medium rtl:space-x-reverse">
+            <li>
+                <a href="/about" class="block py-2 px-3 text-xl relative text-[#9C7B50] hover:text-[#650D1B] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-[#650D1B] before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-[#650D1B] after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                About
+                </a>
+            </li>
+            <li>
+                <a href="/portfolio" class="block py-2 px-3 text-xl relative text-[#9C7B50] hover:text-[#650D1B] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-[#650D1B] before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-[#650D1B] after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                My Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="/contact" class="block py-2 px-3 text-xl relative text-[#9C7B50] hover:text-[#650D1B] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-[#650D1B] before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-[#650D1B] after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                Contact
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/bukhosi-shuva" target="_blank" class="block py-2 px-3">
+                <%= image_tag "linkedinlogo.png", alt: "BSlogo", class:"h-8 w-auto hover:opacity-100 transition duration-300"%>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </div>
+
+    <!-- JavaScript for toggling menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("mobile-menu");
+            const hamburger = document.getElementById("hamburger-icon");
+            const close = document.getElementById("close-icon");
+
+            toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            hamburger.classList.toggle("hidden");
+            close.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+    <div class="pt-10">
+      <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between space-x-0 md:space-x-8 text-center md:text-left">
+        <!-- Left Side: Image -->
+        <div class="flex-1 mb-8 md:mb-0">
+          <%= image_tag "proffesionalimage.png", alt: "proffesional", class: "w-full max-w-md mx-auto rounded-lg shadow-lg" %>
+        </div>
+  
+        <!-- Right Side: Text Content -->
+        <div class="flex-1">
+          <h1 id="landing_name" class="text-[#352A1C] text-5xl font-none pb-10 pt-1 whitespace-nowrap">
+            About Me
+          </h1>
+  
+          <hr class="shadow-[0_0_8px_1px_#9C7B50] border-none w-full m-0">
+  
+          <p class="text-[#352A1C] font-none mt-4 pt-5">
+                  Hi, I’m Bukhosi Shuva — a Software Developer at Arise Church and a recent ICT graduate from Ara Institute of Canterbury. 
+                  I’m passionate about creating digital experiences that combine functionality with beauty,
+                  I believe great software should feel user-friendly, look good, feel good to use, and solve real-world problems with elegance.
+                  <br> 
+                  <br>
+                  At Arise Church, I contribute to real-world development projects that support internal systems and community engagement, while continuing to build my skills in 
+                  full-stack development, API integration, and UI design. I also gained industry experience through my internship at Seequent, where I helped deliver key features for 
+                  the Evo platform using Python, React, and MongoDB.
+                  <br>
+                  <br>
+                  Now, I’m actively seeking a Software Development/ Engineering role where I can expand my skills, grow professionally, and bring value to innovative teams.
+                  My motto? “Feel the fear and do it anyway.” I believe growth begins outside of your comfort zone, and I’m always ready to take on new challenges with curiosity and courage.
+                  <br>
+                  <br>
+                  I’m excited to connect with like-minded individuals and explore opportunities that allow me to make a positive impact through technology.
+                  <br>
+                  <br>
+                  <span class="italic">Join me on this journey of coding with elegance, where every line of code is a brushstroke
+                  on the canvas of technology.</span>
+          </p>
+  
+          <div class="pt-10">
+            <a href="/resume.pdf" download="Bukhosi_Shava_Resume.pdf">
+              <button type="button" class="text-white bg-[#94754C] hover:bg-[#352A1C] focus:outline-none focus:ring-4 focus:ring-[#94754C] font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-[#94754C] dark:hover:bg-[#94754C] dark:focus:ring-[#94754C]">download resume</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- QUALIFICATIONS SECTION -->
+      <div class="pt-20 lg:pl-20 sm:pl-0">
+      <div class="max-w-7xl w-full pt-10 flex flex-col items-center justify-center gap-10 py-12 px-4">
+          <h2 class="text-[#352A1C] text-5xl font-semibold text-center">
+          Education & Qualifications
+          </h2>
+  
+          <!-- Card 1 -->
+          <div class="flex flex-col md:flex-row items-center bg-[#F8F6F2] shadow-lg rounded-lg overflow-hidden w-full max-w-screen-md">
+          <div class="md:w-1/2">
+              <%= image_tag "tertiaryimage.jpg", alt: "Ara Institute", class: "w-full h-full object-cover" %>
+          </div>
+          <div class="md:w-1/2 p-6">
+              <h3 class="text-2xl font-bold text-[#352A1C] mb-2">Bachelor of ICT</h3>
+              <p class="text-[#352A1C] text-base mb-1">Specialising in Software Development</p>
+              <p class="text-[#352A1C] text-base">Ara Institute of Canterbury | Christchurch, NZ</p>
+              <p class="text-[#352A1C] text-base">July 2022 – December 2024</p>
+          </div>
+          </div>
+  
+          <!-- Card 2 -->
+          <div class="flex flex-col md:flex-row-reverse items-center bg-[#F8F6F2] shadow-lg rounded-lg overflow-hidden w-full max-w-screen-md">
+          <div class="md:w-1/2">
+              <%= image_tag "vintagecomputer.jpg", alt: "Diploma", class: "w-full h-full object-cover" %>
+          </div>
+          <div class="md:w-1/2 p-6">
+              <h3 class="text-2xl font-bold text-[#352A1C] mb-2">Diploma in IT Technical Support (Level 5)</h3>
+              <p class="text-[#352A1C] text-base">Ara Institute of Canterbury | Christchurch, NZ</p>
+              <p class="text-[#352A1C] text-base">July 2021 – July 2022</p>
+          </div>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="flex flex-col md:flex-row items-center bg-[#F8F6F2] shadow-lg rounded-lg overflow-hidden w-full max-w-screen-md">
+          <div class="md:w-1/2">
+              <%= image_tag "image.jpg", alt: "High School", class: "w-full h-full object-cover" %>
+          </div>
+          <div class="md:w-1/2 p-6">
+              <h3 class="text-2xl font-bold text-[#352A1C] mb-2">NCEA Levels 1, 2 & 3</h3>
+              <p class="text-[#352A1C] text-base">Hillmorton High School | Christchurch, NZ</p>
+              <ul class="list-disc list-inside text-[#352A1C] text-base mt-2 space-y-1">
+              <li>Level 1 (2018): Attained Literacy & Numeracy</li>
+              <li>Level 2 (2019): University Literacy Entrance</li>
+              <li>Level 3 (2020): University Entrance</li>
+              </ul>
+          </div>
+          </div>
+      </div>
+      </div>
+  
+      <!-- Experience Section -->
+  
+      <div class="pt-10 py-12 px-4">
+          <h1 id="landing_name" class="text-[#352A1C] text-5xl font-none pb-10 pt-1 whitespace-nowrap sm:pl-20 lg:pl-28">
+               Experiences
+          </h1>
+      <hr class="shadow-[0_0_8px_1px_#9C7B50] border-none w-full m-0">
+  
+      <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between space-x-0 md:space-x-8 text-left pl-10 md:text-left">
+        <!-- Right Side: Text Content -->
+        <div class="flex-1">
+          <p class="text-[#352A1C] font-none mt-4 pt-5">
+                 <h2 class="text-2xl font-bold text-[#352A1C] ">Seequent - Software Engineering Intern</h2>
+                  <h3 class="text-[#352A1C] font-bold mb-2 italic">20 Moorhouse Avenue, Addington, Christchurch 8011</h3>
+                  <h3 class="text-[#352A1C] font-bold mb-2 italic">19 August 2024 to 28 October 2024</h3>
+                  <li class="text-[#352A1C] text-base">Collaborated with supervisor, mentor, and team to develop a "stages" feature for my Capstone project.</li>
+                  <li class="text-[#352A1C] text-base">Brainstormed and explored solutions for implementing the feature.</li>
+                  <li class="text-[#352A1C] text-base">Planned and designed both backend and frontend requirements for the feature</li>
+                  <li class="text-[#352A1C] text-base">Developed and wrote backend and frontend code.</li>
+                  <li class="text-[#352A1C] text-base">Debugged and troubleshot code issues</li>
+                  <li class="text-[#352A1C] text-base">Attended regular team meetings to discuss progress and challenges.</li>
+          </p>
+    
+          <p class="text-[#352A1C] font-none mt-4 pt-5">
+              <h2 class="text-2xl font-bold text-[#352A1C] "> Arise Church - Software Developer</h2>
+              <h3 class="text-[#352A1C] font-bold mb-2 italic">85 Picton Avenue, Riccarton, Christchurch, NZ</h3>
+              <h3 class="text-[#352A1C] font-bold mb-2 italic">14 March 2025 to Present (Part Time)</h3>
+              <li class="text-[#352A1C] text-base">Developing and maintaining internal databases and app ecosystems.</li>
+              <li class="text-[#352A1C] text-base">Contributing to website development and maintenance.</li>
+              <li class="text-[#352A1C] text-base">Participating in development processes from requirement collection to delivery and deployment.</li>
+              <li class="text-[#352A1C] text-base">Maintaining developed apps for security and functionality.</li>
+              <li class="text-[#352A1C] text-base">Debugging and troubleshooting code issues</li>
+              <li class="text-[#352A1C] text-base">Attended regular team meetings to discuss progress and challenges.</li>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="max-w-7xl w-full px-4 pt-10 flex flex-col items-center justify-center gap-10 py-12 lg:pl-40">
+    <h2 class="text-[#352A1C] text-5xl font-semibold text-center">My Skill Stack</h2>
+
+  <!-- Skill Cards Wrapper -->
+        <div class="flex flex-col gap-8 w-full">
+
+        <!-- Soft Skills Card -->
+       <div class="bg-white shadow-md p-8 rounded-2xl border border-[#d1bfa8] flex flex-col gap-6 max-w-lg mx-auto">
+        <h3 class="text-[#352A1C] text-3xl font-semibold text-center tracking-wide">Soft Skills</h3>
+        <div class="flex flex-wrap gap-3 justify-center">
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Communication
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Teamwork
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Problem-Solving
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Adaptability
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Time Management
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Critical Thinking
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Creativity
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Leadership
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Attention to Detail
+            </div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm cursor-default select-none transition-colors hover:bg-[#e6d7c1]">
+            Empathy
+            </div>
+        </div>
+        </div>
+
+            <!-- Technical Skills Card -->
+        <div class="bg-white shadow-md p-8 rounded-2xl border border-[#d1bfa8] flex flex-col gap-6 max-w-lg mx-auto">
+        <h3 class="text-[#352A1C] text-3xl font-semibold text-center tracking-wide">Technical Skills</h3>
+
+        <!-- Each Section -->
+        <div>
+            <h4 class="text-lg font-semibold text-[#352A1C] mb-3 text-center">Languages & Frameworks</h4>
+            <div class="flex flex-wrap gap-3 justify-center">
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Python</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">WordPress</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">JavaScript</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">PHP</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">HTML & CSS</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Ruby on Rails</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Postman API</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Django</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">WooCommerse</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Rest APIs</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Docker</div>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold text-[#352A1C] mb-3 mt-6 text-center">Frontend & UI</h4>
+            <div class="flex flex-wrap gap-3 justify-center">
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">React</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Bootstrap</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Tailwind Flowbite CSS</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Figma</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Material-UI</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Lapentor</div>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold text-[#352A1C] mb-3 mt-6 text-center">Dev Methods & Tools</h4>
+            <div class="flex flex-wrap gap-3 justify-center">
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Agile/Scrum</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">SDLC</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Scrumban</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Design Thinking</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">DevOps</div>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold text-[#352A1C] mb-3 mt-6 text-center">Database</h4>
+            <div class="flex flex-wrap gap-3 justify-center">
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">MongoDB</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">MySQL</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">PostgreSQL</div>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold text-[#352A1C] mb-3 mt-6 text-center">Version Control</h4>
+            <div class="flex flex-wrap gap-3 justify-center">
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">GitHub</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">CI/CD</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">GitLab</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Git</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Jira</div>
+            <div class="bg-[#f3ede6] text-[#352A1C] font-semibold px-4 py-2 rounded-full text-sm transition-colors hover:bg-[#e6d7c1]">Kubernetes</div>
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <div class="w-full flex justify-end pr-10">
+        <button onclick="history.back()" class="text-white bg-[#9C7B50] hover:bg-[#b08a5c] px-4 py-2 rounded-lg shadow-md">
+            ← Back
+        </button>
+    </div>
+  
+  
+  <!-- Footer -->
+    <div class="pt-20">
+      <footer class="bg-[#EDEADF] rounded-lg shadow-sm dark:bg-gray-900 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+          <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+               <%= image_tag "smallerlogo-removebg.png", alt: "BSlogo", class: "h-25 w-auto" %>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-[#876A45] sm:mb-0 dark:text-gray-400">
+              <li><a href="/about" class="hover:underline me-4 md:me-6">About</a></li>
+              <li><a href="#" class="hover:underline me-4 md:me-6">My Portfolio</a></li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/bukhosi-shuva" target="_blank" class="block py-2 px-3">
+                  <%= image_tag "linkedinlogo.png", alt: "BSlogo", class:"h-8 w-auto hover:opacity-100 transition duration-300"%>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr class="my-6 border-[#94754C]  sm:mx-auto dark:border-gray-[#94754C]  lg:my-8" />
+          <span class="block text-sm text-[#876A45] sm:text-center dark:text-gray-400">© 2025 <a href="https://flowbite.com/" class="hover:underline">Bukhosi Shuva™</a>. All Rights Reserved.</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  

@@ -1,0 +1,147 @@
+<div class="container mx-auto px-4 -mt-4">  
+      <div>
+    <nav class="w-full bg-[#EDEADF]">
+        <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+        
+        <!-- Logo -->
+        <a href="/home" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <%= image_tag "smallerlogo-removebg.png", alt: "BSlogo", class: "h-25 w-auto" %>
+        </a>
+
+        <!-- Hamburger button -->
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#9C7B50] rounded-lg md:hidden hover:bg-[#d6d4cc] focus:outline-none focus:ring-2 focus:ring-[#9C7B50]">
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Menu Items -->
+        <div id="mobile-menu" class="hidden w-full md:flex md:w-auto md:items-center md:space-x-8">
+            <ul class="flex flex-col md:flex-row mt-4 md:mt-0 text-base font-medium rtl:space-x-reverse">
+            <li>
+                <a href="/about" class="block py-2 px-3 text-xl relative text-[#9C7B50] hover:text-[#650D1B] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-[#650D1B] before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-[#650D1B] after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                About
+                </a>
+            </li>
+            <li>
+                <a href="/portfolio" class="block py-2 px-3 text-xl relative text-[#9C7B50] hover:text-[#650D1B] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-[#650D1B] before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-[#650D1B] after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                My Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="/contact" class="block py-2 px-3 text-xl relative text-[#9C7B50] hover:text-[#650D1B] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-[#650D1B] before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-[#650D1B] after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                Contact
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/bukhosi-shuva" target="_blank" class="block py-2 px-3">
+                <%= image_tag "linkedinlogo.png", alt: "BSlogo", class:"h-8 w-auto hover:opacity-100 transition duration-300"%>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </div>
+
+    <!-- JavaScript for toggling menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("mobile-menu");
+            const hamburger = document.getElementById("hamburger-icon");
+            const close = document.getElementById("close-icon");
+
+            toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            hamburger.classList.toggle("hidden");
+            close.classList.toggle("hidden");
+            });
+        });
+    </script>
+  
+    <div class="pt-10">
+    <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between space-x-0 md:space-x-8 text-center md:text-left">
+
+        <!-- Left Side: Image -->
+        <div class="flex-1 mb-8 md:mb-0">
+            <%= image_tag "evo.png", alt: "Zoomable image" %>
+        </div>
+
+        <!-- Right Side: Text Content -->
+        <div class="flex-1">
+          <h1 id="landing_name" class="text-[#352A1C] text-5xl font-none pb-10 pt-1">
+            Evo Data Stages
+          </h1>
+  
+          <hr class="shadow-[0_0_8px_1px_#9C7B50] border-none w-full m-0">
+  
+          <p class="text-[#352A1C] font-none mt-4 pt-5">
+            In the final semester of my degree at Ara Institute of Canterbury, I interned as a Software Engineer at 
+            Seequent. During my internship, I worked on a data management feature for the EVO platform—a cloud-based ecosystem 
+            used by geoscientists in industries such as mining and civil engineering to manage and visualize geoscience data collaboratively.
+            <br><br>
+            My project focused on the EVO Data Stages feature, which allows users to classify and provide detailed updates 
+            on geoscience objects. The goal was to enable better workflow management by assigning stages like “approved” or 
+            “work in progress” to data objects. I successfully implemented the first phase of this feature, allowing users to 
+            assign hardcoded stages to their data.
+            
+            <br><br>
+            This functionality improves data interaction, collaboration, and clarity among users. Based on insights from team 
+            discussions with architects and the product owner, the feature is set to expand further, allowing administrators to 
+            modify stages and integrate triggering actions for streamlined data workflows.
+
+
+  
+          <div class="pt-10">
+            <a href="/resume.pdf" download="Bukhosi_Shava_Resume.pdf">
+              <button type="button" class="text-white bg-[#94754C] hover:bg-[#352A1C] focus:outline-none focus:ring-4 focus:ring-[#94754C] font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-[#94754C] dark:hover:bg-[#94754C] dark:focus:ring-[#94754C]">download resume</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <h2 id="landing_name" class="text-[#352A1C] text-center text-4xl font-none pt-1 pt-20">
+        Evo Data Stages Demo Video
+    </h2>
+
+    <div class="flex-1 md:pt-12 mb-8 md:mb-0">
+    <video controls class="w-full max-w-2xl mx-auto rounded-lg shadow-lg">
+        <source src="<%= asset_path('FrontEndDemoV2.mov') %>" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+
+    <div class="w-full flex justify-end pr-10">
+        <button onclick="history.back()" class="text-white bg-[#9C7B50] hover:bg-[#b08a5c] px-4 py-2 rounded-lg shadow-md">
+            ← Back
+        </button>
+    </div>
+  
+    <div class="pt-20">
+      <footer class="bg-[#EDEADF] rounded-lg shadow-sm dark:bg-gray-900 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+          <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+               <%= image_tag "smallerlogo-removebg.png", alt: "BSlogo", class: "h-25 w-auto" %>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-[#876A45] sm:mb-0 dark:text-gray-400">
+              <li><a href="/about" class="hover:underline me-4 md:me-6">About</a></li>
+              <li><a href="#" class="hover:underline me-4 md:me-6">My Portfolio</a></li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/bukhosi-shuva" target="_blank" class="block py-2 px-3">
+                  <%= image_tag "linkedinlogo.png", alt: "BSlogo", class:"h-8 w-auto hover:opacity-100 transition duration-300"%>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr class="my-6 border-[#94754C]  sm:mx-auto dark:border-gray-[#94754C]  lg:my-8" />
+          <span class="block text-sm text-[#876A45] sm:text-center dark:text-gray-400">© 2025 <a href="https://flowbite.com/" class="hover:underline">Bukhosi Shuva™</a>. All Rights Reserved.</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+  
