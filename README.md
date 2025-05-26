@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# -my-portfolio
+my personal portfolio website 
+=======
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +26,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+>>>>>>> 6b932f3 (new portfolio website)
